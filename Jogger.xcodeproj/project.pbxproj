@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC24B6B11BFAAD90007E9664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6B01BFAAD90007E9664 /* AppDelegate.swift */; };
+		DC24B6B41BFAAD90007E9664 /* Jogger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6B21BFAAD90007E9664 /* Jogger.xcdatamodeld */; };
+		DC24B6B61BFAAD90007E9664 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6B51BFAAD90007E9664 /* ViewController.swift */; };
+		DC24B6B91BFAAD90007E9664 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC24B6B71BFAAD90007E9664 /* Main.storyboard */; };
+		DC24B6BB1BFAAD90007E9664 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC24B6BA1BFAAD90007E9664 /* Images.xcassets */; };
+		DC24B6BE1BFAAD90007E9664 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC24B6BC1BFAAD90007E9664 /* LaunchScreen.xib */; };
+		DC24B6CA1BFAAD90007E9664 /* JoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6C91BFAAD90007E9664 /* JoggerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC24B6C41BFAAD90007E9664 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC24B6A31BFAAD90007E9664 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC24B6AA1BFAAD90007E9664;
+			remoteInfo = Jogger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC24B6AB1BFAAD90007E9664 /* Jogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC24B6AF1BFAAD90007E9664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC24B6B01BFAAD90007E9664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC24B6B31BFAAD90007E9664 /* Jogger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jogger.xcdatamodel; sourceTree = "<group>"; };
+		DC24B6B51BFAAD90007E9664 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC24B6B81BFAAD90007E9664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC24B6BA1BFAAD90007E9664 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DC24B6BD1BFAAD90007E9664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DC24B6C31BFAAD90007E9664 /* JoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC24B6C81BFAAD90007E9664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC24B6C91BFAAD90007E9664 /* JoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoggerTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC24B6A81BFAAD90007E9664 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC24B6C01BFAAD90007E9664 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC24B6A21BFAAD90007E9664 = {
+			isa = PBXGroup;
+			children = (
+				DC24B6AD1BFAAD90007E9664 /* Jogger */,
+				DC24B6C61BFAAD90007E9664 /* JoggerTests */,
+				DC24B6AC1BFAAD90007E9664 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC24B6AC1BFAAD90007E9664 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC24B6AB1BFAAD90007E9664 /* Jogger.app */,
+				DC24B6C31BFAAD90007E9664 /* JoggerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC24B6AD1BFAAD90007E9664 /* Jogger */ = {
+			isa = PBXGroup;
+			children = (
+				DC24B6B01BFAAD90007E9664 /* AppDelegate.swift */,
+				DC24B6B51BFAAD90007E9664 /* ViewController.swift */,
+				DC24B6B71BFAAD90007E9664 /* Main.storyboard */,
+				DC24B6BA1BFAAD90007E9664 /* Images.xcassets */,
+				DC24B6BC1BFAAD90007E9664 /* LaunchScreen.xib */,
+				DC24B6B21BFAAD90007E9664 /* Jogger.xcdatamodeld */,
+				DC24B6AE1BFAAD90007E9664 /* Supporting Files */,
+			);
+			path = Jogger;
+			sourceTree = "<group>";
+		};
+		DC24B6AE1BFAAD90007E9664 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC24B6AF1BFAAD90007E9664 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC24B6C61BFAAD90007E9664 /* JoggerTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC24B6C91BFAAD90007E9664 /* JoggerTests.swift */,
+				DC24B6C71BFAAD90007E9664 /* Supporting Files */,
+			);
+			path = JoggerTests;
+			sourceTree = "<group>";
+		};
+		DC24B6C71BFAAD90007E9664 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC24B6C81BFAAD90007E9664 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC24B6AA1BFAAD90007E9664 /* Jogger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC24B6CD1BFAAD90007E9664 /* Build configuration list for PBXNativeTarget "Jogger" */;
+			buildPhases = (
+				DC24B6A71BFAAD90007E9664 /* Sources */,
+				DC24B6A81BFAAD90007E9664 /* Frameworks */,
+				DC24B6A91BFAAD90007E9664 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Jogger;
+			productName = Jogger;
+			productReference = DC24B6AB1BFAAD90007E9664 /* Jogger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC24B6C21BFAAD90007E9664 /* JoggerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC24B6D01BFAAD90007E9664 /* Build configuration list for PBXNativeTarget "JoggerTests" */;
+			buildPhases = (
+				DC24B6BF1BFAAD90007E9664 /* Sources */,
+				DC24B6C01BFAAD90007E9664 /* Frameworks */,
+				DC24B6C11BFAAD90007E9664 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC24B6C51BFAAD90007E9664 /* PBXTargetDependency */,
+			);
+			name = JoggerTests;
+			productName = JoggerTests;
+			productReference = DC24B6C31BFAAD90007E9664 /* JoggerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC24B6A31BFAAD90007E9664 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Stephen Rice";
+				TargetAttributes = {
+					DC24B6AA1BFAAD90007E9664 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					DC24B6C21BFAAD90007E9664 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = DC24B6AA1BFAAD90007E9664;
+					};
+				};
+			};
+			buildConfigurationList = DC24B6A61BFAAD90007E9664 /* Build configuration list for PBXProject "Jogger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC24B6A21BFAAD90007E9664;
+			productRefGroup = DC24B6AC1BFAAD90007E9664 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC24B6AA1BFAAD90007E9664 /* Jogger */,
+				DC24B6C21BFAAD90007E9664 /* JoggerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC24B6A91BFAAD90007E9664 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC24B6B91BFAAD90007E9664 /* Main.storyboard in Resources */,
+				DC24B6BE1BFAAD90007E9664 /* LaunchScreen.xib in Resources */,
+				DC24B6BB1BFAAD90007E9664 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC24B6C11BFAAD90007E9664 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC24B6A71BFAAD90007E9664 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC24B6B61BFAAD90007E9664 /* ViewController.swift in Sources */,
+				DC24B6B11BFAAD90007E9664 /* AppDelegate.swift in Sources */,
+				DC24B6B41BFAAD90007E9664 /* Jogger.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC24B6BF1BFAAD90007E9664 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC24B6CA1BFAAD90007E9664 /* JoggerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC24B6C51BFAAD90007E9664 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC24B6AA1BFAAD90007E9664 /* Jogger */;
+			targetProxy = DC24B6C41BFAAD90007E9664 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC24B6B71BFAAD90007E9664 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC24B6B81BFAAD90007E9664 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC24B6BC1BFAAD90007E9664 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC24B6BD1BFAAD90007E9664 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC24B6CB1BFAAD90007E9664 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DC24B6CC1BFAAD90007E9664 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC24B6CE1BFAAD90007E9664 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Jogger/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DC24B6CF1BFAAD90007E9664 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Jogger/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DC24B6D11BFAAD90007E9664 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JoggerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jogger.app/Jogger";
+			};
+			name = Debug;
+		};
+		DC24B6D21BFAAD90007E9664 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JoggerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jogger.app/Jogger";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC24B6A61BFAAD90007E9664 /* Build configuration list for PBXProject "Jogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC24B6CB1BFAAD90007E9664 /* Debug */,
+				DC24B6CC1BFAAD90007E9664 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC24B6CD1BFAAD90007E9664 /* Build configuration list for PBXNativeTarget "Jogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC24B6CE1BFAAD90007E9664 /* Debug */,
+				DC24B6CF1BFAAD90007E9664 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DC24B6D01BFAAD90007E9664 /* Build configuration list for PBXNativeTarget "JoggerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC24B6D11BFAAD90007E9664 /* Debug */,
+				DC24B6D21BFAAD90007E9664 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DC24B6B21BFAAD90007E9664 /* Jogger.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DC24B6B31BFAAD90007E9664 /* Jogger.xcdatamodel */,
+			);
+			currentVersion = DC24B6B31BFAAD90007E9664 /* Jogger.xcdatamodel */;
+			path = Jogger.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DC24B6A31BFAAD90007E9664 /* Project object */;
+}
