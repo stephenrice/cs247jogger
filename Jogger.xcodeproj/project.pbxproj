@@ -14,6 +14,10 @@
 		DC24B6BB1BFAAD90007E9664 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC24B6BA1BFAAD90007E9664 /* Images.xcassets */; };
 		DC24B6BE1BFAAD90007E9664 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC24B6BC1BFAAD90007E9664 /* LaunchScreen.xib */; };
 		DC24B6CA1BFAAD90007E9664 /* JoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6C91BFAAD90007E9664 /* JoggerTests.swift */; };
+		DC24B6D61BFAAEAF007E9664 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6D51BFAAEAF007E9664 /* Run.swift */; };
+		DC24B6D81BFAAEBE007E9664 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6D71BFAAEBE007E9664 /* Location.swift */; };
+		DC24B6DB1BFAAFA1007E9664 /* NewRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6DA1BFAAFA1007E9664 /* NewRunViewController.swift */; };
+		DCDC11571BFB1B2B0030BBF4 /* stoplights.json in Resources */ = {isa = PBXBuildFile; fileRef = DCDC11561BFB1B2B0030BBF4 /* stoplights.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		DC24B6C31BFAAD90007E9664 /* JoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC24B6C81BFAAD90007E9664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC24B6C91BFAAD90007E9664 /* JoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoggerTests.swift; sourceTree = "<group>"; };
+		DC24B6D51BFAAEAF007E9664 /* Run.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
+		DC24B6D71BFAAEBE007E9664 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		DC24B6DA1BFAAFA1007E9664 /* NewRunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRunViewController.swift; sourceTree = "<group>"; };
+		DCDC11561BFB1B2B0030BBF4 /* stoplights.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stoplights.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +87,10 @@
 		DC24B6AD1BFAAD90007E9664 /* Jogger */ = {
 			isa = PBXGroup;
 			children = (
+				DC24B6D91BFAAEC9007E9664 /* Models */,
 				DC24B6B01BFAAD90007E9664 /* AppDelegate.swift */,
 				DC24B6B51BFAAD90007E9664 /* ViewController.swift */,
+				DC24B6DA1BFAAFA1007E9664 /* NewRunViewController.swift */,
 				DC24B6B71BFAAD90007E9664 /* Main.storyboard */,
 				DC24B6BA1BFAAD90007E9664 /* Images.xcassets */,
 				DC24B6BC1BFAAD90007E9664 /* LaunchScreen.xib */,
@@ -94,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				DC24B6AF1BFAAD90007E9664 /* Info.plist */,
+				DCDC11561BFB1B2B0030BBF4 /* stoplights.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -113,6 +124,15 @@
 				DC24B6C81BFAAD90007E9664 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC24B6D91BFAAEC9007E9664 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DC24B6D51BFAAEAF007E9664 /* Run.swift */,
+				DC24B6D71BFAAEBE007E9664 /* Location.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +184,11 @@
 				TargetAttributes = {
 					DC24B6AA1BFAAD90007E9664 = {
 						CreatedOnToolsVersion = 6.3.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					DC24B6C21BFAAD90007E9664 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -195,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCDC11571BFB1B2B0030BBF4 /* stoplights.json in Resources */,
 				DC24B6B91BFAAD90007E9664 /* Main.storyboard in Resources */,
 				DC24B6BE1BFAAD90007E9664 /* LaunchScreen.xib in Resources */,
 				DC24B6BB1BFAAD90007E9664 /* Images.xcassets in Resources */,
@@ -216,6 +242,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC24B6B61BFAAD90007E9664 /* ViewController.swift in Sources */,
+				DC24B6DB1BFAAFA1007E9664 /* NewRunViewController.swift in Sources */,
+				DC24B6D61BFAAEAF007E9664 /* Run.swift in Sources */,
+				DC24B6D81BFAAEBE007E9664 /* Location.swift in Sources */,
 				DC24B6B11BFAAD90007E9664 /* AppDelegate.swift in Sources */,
 				DC24B6B41BFAAD90007E9664 /* Jogger.xcdatamodeld in Sources */,
 			);
@@ -413,6 +442,7 @@
 				DC24B6CF1BFAAD90007E9664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC24B6D01BFAAD90007E9664 /* Build configuration list for PBXNativeTarget "JoggerTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +451,7 @@
 				DC24B6D21BFAAD90007E9664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

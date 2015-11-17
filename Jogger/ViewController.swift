@@ -7,19 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    var managedObjectContext: NSManagedObjectContext?
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.destinationViewController.isKindOfClass(NewRunViewController) {
+            if let newRunViewController = segue.destinationViewController as? NewRunViewController {
+                newRunViewController.managedObjectContext = managedObjectContext
+            }
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
-
