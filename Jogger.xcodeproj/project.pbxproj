@@ -17,6 +17,7 @@
 		DC24B6D61BFAAEAF007E9664 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6D51BFAAEAF007E9664 /* Run.swift */; };
 		DC24B6D81BFAAEBE007E9664 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6D71BFAAEBE007E9664 /* Location.swift */; };
 		DC24B6DB1BFAAFA1007E9664 /* NewRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6DA1BFAAFA1007E9664 /* NewRunViewController.swift */; };
+		DC68D90A1BFC394E00E73992 /* Stoplights.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D9091BFC394E00E73992 /* Stoplights.swift */; };
 		DCDC11571BFB1B2B0030BBF4 /* stoplights.json in Resources */ = {isa = PBXBuildFile; fileRef = DCDC11561BFB1B2B0030BBF4 /* stoplights.json */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		DC24B6D51BFAAEAF007E9664 /* Run.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 		DC24B6D71BFAAEBE007E9664 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		DC24B6DA1BFAAFA1007E9664 /* NewRunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRunViewController.swift; sourceTree = "<group>"; };
+		DC68D9091BFC394E00E73992 /* Stoplights.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stoplights.swift; sourceTree = "<group>"; };
 		DCDC11561BFB1B2B0030BBF4 /* stoplights.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stoplights.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 				DC24B6B01BFAAD90007E9664 /* AppDelegate.swift */,
 				DC24B6B51BFAAD90007E9664 /* ViewController.swift */,
 				DC24B6DA1BFAAFA1007E9664 /* NewRunViewController.swift */,
+				DC68D9091BFC394E00E73992 /* Stoplights.swift */,
 				DC24B6B71BFAAD90007E9664 /* Main.storyboard */,
 				DC24B6BA1BFAAD90007E9664 /* Images.xcassets */,
 				DC24B6BC1BFAAD90007E9664 /* LaunchScreen.xib */,
@@ -247,6 +250,7 @@
 				DC24B6D81BFAAEBE007E9664 /* Location.swift in Sources */,
 				DC24B6B11BFAAD90007E9664 /* AppDelegate.swift in Sources */,
 				DC24B6B41BFAAD90007E9664 /* Jogger.xcdatamodeld in Sources */,
+				DC68D90A1BFC394E00E73992 /* Stoplights.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

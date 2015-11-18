@@ -37,37 +37,66 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZy-LZ-G8d">
                                 <rect key="frame" x="277" y="244" width="63" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="109" id="qC1-GV-jGf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
-                                <state key="normal" title="New Run">
+                                <state key="normal" title="Free Run">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="qC1-GV-jGf"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="qC1-GV-jGf"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="DOw-1H-jqe" kind="show" id="SrM-Qp-SnY"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Vo-ff-6Wb">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                                <animations/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="219" width="400" height="162"/>
+                                </variation>
+                            </pickerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XZy-LZ-G8d" firstAttribute="top" secondItem="8ch-0h-7wR" secondAttribute="bottom" constant="181" id="4Kt-6Z-ebs"/>
-                            <constraint firstItem="XZy-LZ-G8d" firstAttribute="centerX" secondItem="GVU-jC-0ua" secondAttribute="centerX" id="YdH-UV-ikz"/>
-                            <constraint firstItem="XZy-LZ-G8d" firstAttribute="leading" secondItem="GVU-jC-0ua" secondAttribute="leadingMargin" constant="8" id="nvL-39-VL5"/>
-                            <constraint firstItem="mvy-EV-oU1" firstAttribute="top" secondItem="XZy-LZ-G8d" secondAttribute="bottom" constant="246" id="w9U-xo-1aV"/>
+                            <constraint firstItem="XZy-LZ-G8d" firstAttribute="top" secondItem="6Vo-ff-6Wb" secondAttribute="bottom" constant="90" id="3TG-2k-hYf"/>
+                            <constraint firstItem="XZy-LZ-G8d" firstAttribute="leading" secondItem="GVU-jC-0ua" secondAttribute="leadingMargin" constant="8" id="WaQ-x3-uUa"/>
+                            <constraint firstItem="XZy-LZ-G8d" firstAttribute="centerX" secondItem="GVU-jC-0ua" secondAttribute="centerX" id="d9a-qw-H44"/>
+                            <constraint firstAttribute="bottom" secondItem="XZy-LZ-G8d" secondAttribute="bottom" constant="20" symbolic="YES" id="fWv-37-04w"/>
+                            <constraint firstItem="XZy-LZ-G8d" firstAttribute="centerX" secondItem="6Vo-ff-6Wb" secondAttribute="centerX" id="yKe-8G-b49"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="6Vo-ff-6Wb"/>
+                            </mask>
                             <mask key="constraints">
-                                <exclude reference="4Kt-6Z-ebs"/>
-                                <exclude reference="YdH-UV-ikz"/>
-                                <exclude reference="nvL-39-VL5"/>
-                                <exclude reference="w9U-xo-1aV"/>
+                                <exclude reference="3TG-2k-hYf"/>
+                                <exclude reference="WaQ-x3-uUa"/>
+                                <exclude reference="d9a-qw-H44"/>
+                                <exclude reference="fWv-37-04w"/>
+                                <exclude reference="yKe-8G-b49"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="6Vo-ff-6Wb"/>
+                            </mask>
                             <mask key="constraints">
-                                <include reference="4Kt-6Z-ebs"/>
-                                <include reference="YdH-UV-ikz"/>
-                                <include reference="nvL-39-VL5"/>
-                                <include reference="w9U-xo-1aV"/>
+                                <include reference="3TG-2k-hYf"/>
+                                <include reference="WaQ-x3-uUa"/>
+                                <include reference="d9a-qw-H44"/>
+                                <include reference="fWv-37-04w"/>
+                                <include reference="yKe-8G-b49"/>
                             </mask>
                         </variation>
                     </view>

@@ -163,9 +163,7 @@ extension NewRunViewController: UIActionSheetDelegate {
 // MARK: - CLLocationManagerDelegate
 extension NewRunViewController: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        let latitude: CLLocationDegrees = 37.330222
-        let longitude: CLLocationDegrees = -122.023243
-        let badLoc = CLLocation(latitude: latitude, longitude: longitude)
+        
         for location in locations as! [CLLocation] {
             let howRecent = location.timestamp.timeIntervalSinceNow
             
@@ -187,18 +185,21 @@ extension NewRunViewController: CLLocationManagerDelegate {
                 //save location
                 self.locations.append(location)
             }
+            for stoplight in stoplights {
+                if stoplight!.distanceFromLocation(location) <= 1000{
+                    // create a corresponding local notification
+                    var notification = UILocalNotification()
+                    notification.alertBody = "Turn right to avoid stoplight." // text that will be displayed in the notification
+                    notification.alertAction = "view" // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
+                    notification.fireDate = NSDate() // todo item due date (when notification will be fired)
+                    notification.soundName = UILocalNotificationDefaultSoundName // play default sound
+                    //notification.userInfo = ["UUID": item.UUID, ] // assign a unique identifier to the notification so that we can retrieve it later
+                    notification.category = "TODO_CATEGORY"
+                    UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                }
+            }
         }
-        if badLoc.distanceFromLocation(self.locations.last) <= 1000 {
-            // create a corresponding local notification
-            var notification = UILocalNotification()
-            notification.alertBody = "Ur super close to the spot" // text that will be displayed in the notification
-            notification.alertAction = "view" // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
-            notification.fireDate = NSDate() // todo item due date (when notification will be fired)
-            notification.soundName = UILocalNotificationDefaultSoundName // play default sound
-            //notification.userInfo = ["UUID": item.UUID, ] // assign a unique identifier to the notification so that we can retrieve it later
-            notification.category = "TODO_CATEGORY"
-            UIApplication.sharedApplication().scheduleLocalNotification(notification)
-        }
+        
     }
 }
 
@@ -212,7 +213,7 @@ extension NewRunViewController: MKMapViewDelegate {
         let polyline = overlay as! MKPolyline
         let renderer = MKPolylineRenderer(polyline: polyline)
         renderer.strokeColor = UIColor.blueColor()
-        renderer.lineWidth = 3
+        renderer.lineWidth = 5
         return renderer
     }
 }
