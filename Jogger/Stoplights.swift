@@ -9,4 +9,5 @@
 import Foundation
 import MapKit
 
-var stoplights = [CLLocation(latitude: CLLocationDegrees(37.330222), longitude: CLLocationDegrees(-122.023243))]
+var stoplights = [CLLocation(latitude: CLLocationDegrees(37.330222), longitude: CLLocationDegrees(-122.023243)),
+                  CLLocation(latitude: CLLocationDegrees(37.330222), longitude: CLLocationDegrees(-122.023243))]

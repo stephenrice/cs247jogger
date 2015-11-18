@@ -58,45 +58,43 @@
                                     <segue destination="DOw-1H-jqe" kind="show" id="SrM-Qp-SnY"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Vo-ff-6Wb">
-                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="S1n-kC-fed">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
                                 <animations/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="219" width="400" height="162"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="139" y="286" width="123" height="29"/>
                                 </variation>
-                            </pickerView>
+                            </segmentedControl>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XZy-LZ-G8d" firstAttribute="top" secondItem="6Vo-ff-6Wb" secondAttribute="bottom" constant="90" id="3TG-2k-hYf"/>
                             <constraint firstItem="XZy-LZ-G8d" firstAttribute="leading" secondItem="GVU-jC-0ua" secondAttribute="leadingMargin" constant="8" id="WaQ-x3-uUa"/>
                             <constraint firstItem="XZy-LZ-G8d" firstAttribute="centerX" secondItem="GVU-jC-0ua" secondAttribute="centerX" id="d9a-qw-H44"/>
                             <constraint firstAttribute="bottom" secondItem="XZy-LZ-G8d" secondAttribute="bottom" constant="20" symbolic="YES" id="fWv-37-04w"/>
-                            <constraint firstItem="XZy-LZ-G8d" firstAttribute="centerX" secondItem="6Vo-ff-6Wb" secondAttribute="centerX" id="yKe-8G-b49"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="6Vo-ff-6Wb"/>
+                                <exclude reference="S1n-kC-fed"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="3TG-2k-hYf"/>
                                 <exclude reference="WaQ-x3-uUa"/>
                                 <exclude reference="d9a-qw-H44"/>
                                 <exclude reference="fWv-37-04w"/>
-                                <exclude reference="yKe-8G-b49"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="6Vo-ff-6Wb"/>
+                                <include reference="S1n-kC-fed"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="3TG-2k-hYf"/>
                                 <include reference="WaQ-x3-uUa"/>
                                 <include reference="d9a-qw-H44"/>
                                 <include reference="fWv-37-04w"/>
-                                <include reference="yKe-8G-b49"/>
                             </mask>
                         </variation>
                     </view>
