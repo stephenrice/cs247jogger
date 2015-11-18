@@ -107,9 +107,9 @@ class NewRunViewController: UIViewController {
         
         // 3
         var error: NSError?
-        let success = managedObjectContext!.save(&error)
+        let success = managedObjectContext!.save(error)
         if !success {
-            println("Could not save the run!")
+            print("Could not save the run!")
         }
     }
     
