@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		095E30271BFE643D005B3E11 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 095E30261BFE643D005B3E11 /* Default@2x.png */; };
 		DC24B6B11BFAAD90007E9664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6B01BFAAD90007E9664 /* AppDelegate.swift */; };
 		DC24B6B41BFAAD90007E9664 /* Jogger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6B21BFAAD90007E9664 /* Jogger.xcdatamodeld */; };
 		DC24B6B61BFAAD90007E9664 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6B51BFAAD90007E9664 /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		095E30261BFE643D005B3E11 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../Default@2x.png"; sourceTree = "<group>"; };
 		DC24B6AB1BFAAD90007E9664 /* Jogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC24B6AF1BFAAD90007E9664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC24B6B01BFAAD90007E9664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				DC68D9091BFC394E00E73992 /* Stoplights.swift */,
 				DC24B6B71BFAAD90007E9664 /* Main.storyboard */,
 				DC24B6BA1BFAAD90007E9664 /* Images.xcassets */,
+				095E30261BFE643D005B3E11 /* Default@2x.png */,
 				DC24B6BC1BFAAD90007E9664 /* LaunchScreen.xib */,
 				DC24B6B21BFAAD90007E9664 /* Jogger.xcdatamodeld */,
 				DC24B6AE1BFAAD90007E9664 /* Supporting Files */,
@@ -182,11 +185,14 @@
 		DC24B6A31BFAAD90007E9664 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Stephen Rice";
 				TargetAttributes = {
 					DC24B6AA1BFAAD90007E9664 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = GVKT26DYR7;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -225,6 +231,7 @@
 			files = (
 				DCDC11571BFB1B2B0030BBF4 /* stoplights.json in Resources */,
 				DC24B6B91BFAAD90007E9664 /* Main.storyboard in Resources */,
+				095E30271BFE643D005B3E11 /* Default@2x.png in Resources */,
 				DC24B6BE1BFAAD90007E9664 /* LaunchScreen.xib in Resources */,
 				DC24B6BB1BFAAD90007E9664 /* Images.xcassets in Resources */,
 			);
@@ -313,6 +320,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -377,9 +385,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Jogger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.stanford.cs193p.srice2.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -387,9 +399,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Jogger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.stanford.cs193p.srice2.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -407,6 +423,7 @@
 				);
 				INFOPLIST_FILE = JoggerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.stanford.cs193p.srice2.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jogger.app/Jogger";
 			};
@@ -422,6 +439,7 @@
 				);
 				INFOPLIST_FILE = JoggerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.stanford.cs193p.srice2.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jogger.app/Jogger";
 			};
