@@ -106,11 +106,18 @@ class NewRunViewController: UIViewController {
         run = savedRun
         
         // 3
-        var error: NSError?
-        let success = managedObjectContext!.save(error)
-        if !success {
-            print("Could not save the run!")
+        //var error: NSError?
+        //let success =
+        do {
+            try self.managedObjectContext!.save()
         }
+        catch {
+            //ignore for the moment
+        }
+
+        //if !success {
+        //    print("Could not save the run!")
+        //}
     }
     
     @IBAction func startPressed(sender: AnyObject) {
@@ -162,15 +169,15 @@ extension NewRunViewController: UIActionSheetDelegate {
 
 // MARK: - CLLocationManagerDelegate
 extension NewRunViewController: CLLocationManagerDelegate {
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        for location in locations as! [CLLocation] {
+        for location in locations {
             let howRecent = location.timestamp.timeIntervalSinceNow
             
             if abs(howRecent) < 10 && location.horizontalAccuracy < 20 {
                 //update distance
                 if self.locations.count > 0 {
-                    distance += location.distanceFromLocation(self.locations.last)
+                    distance += location.distanceFromLocation(self.locations.last!)
                     
                     var coords = [CLLocationCoordinate2D]()
                     coords.append(self.locations.last!.coordinate)
@@ -186,7 +193,7 @@ extension NewRunViewController: CLLocationManagerDelegate {
                 self.locations.append(location)
             }
             for stoplight in stoplights {
-                if stoplight!.distanceFromLocation(location) <= 1000{
+                if stoplight.distanceFromLocation(location) <= 1000{
                     // create a corresponding local notification
                     var notification = UILocalNotification()
                     notification.alertBody = "Turn right to avoid stoplight." // text that will be displayed in the notification
@@ -205,7 +212,7 @@ extension NewRunViewController: CLLocationManagerDelegate {
 
 // MARK: - MKMapViewDelegate
 extension NewRunViewController: MKMapViewDelegate {
-    func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer! {
         if !overlay.isKindOfClass(MKPolyline) {
             return nil
         }
