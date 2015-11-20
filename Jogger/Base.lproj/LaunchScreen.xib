@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="wfG-vS-Qnm">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="wfG-vS-Qnm">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <animations/>
                 </imageView>

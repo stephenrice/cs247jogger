@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		095E30271BFE643D005B3E11 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 095E30261BFE643D005B3E11 /* Default@2x.png */; };
+		095E306B1BFE70B0005B3E11 /* AppIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 095E30681BFE70B0005B3E11 /* AppIcon@2x.png */; };
+		095E306C1BFE70B0005B3E11 /* AppIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 095E30691BFE70B0005B3E11 /* AppIcon@3x.png */; };
+		095E306D1BFE70B0005B3E11 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 095E306A1BFE70B0005B3E11 /* Default@2x.png */; };
+		095E306F1BFE729A005B3E11 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 095E306E1BFE729A005B3E11 /* Lato-Medium.ttf */; };
+		095E30AB1BFE97AF005B3E11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 095E30AA1BFE97AF005B3E11 /* Assets.xcassets */; };
 		DC24B6B11BFAAD90007E9664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6B01BFAAD90007E9664 /* AppDelegate.swift */; };
 		DC24B6B41BFAAD90007E9664 /* Jogger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6B21BFAAD90007E9664 /* Jogger.xcdatamodeld */; };
 		DC24B6B61BFAAD90007E9664 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6B51BFAAD90007E9664 /* ViewController.swift */; };
 		DC24B6B91BFAAD90007E9664 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC24B6B71BFAAD90007E9664 /* Main.storyboard */; };
-		DC24B6BB1BFAAD90007E9664 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC24B6BA1BFAAD90007E9664 /* Images.xcassets */; };
 		DC24B6BE1BFAAD90007E9664 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC24B6BC1BFAAD90007E9664 /* LaunchScreen.xib */; };
 		DC24B6CA1BFAAD90007E9664 /* JoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6C91BFAAD90007E9664 /* JoggerTests.swift */; };
 		DC24B6D61BFAAEAF007E9664 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6D51BFAAEAF007E9664 /* Run.swift */; };
@@ -33,14 +36,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		095E30261BFE643D005B3E11 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../Default@2x.png"; sourceTree = "<group>"; };
+		095E30681BFE70B0005B3E11 /* AppIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon@2x.png"; sourceTree = "<group>"; };
+		095E30691BFE70B0005B3E11 /* AppIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon@3x.png"; sourceTree = "<group>"; };
+		095E306A1BFE70B0005B3E11 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		095E306E1BFE729A005B3E11 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Medium.ttf"; path = "Lato2OFL/Lato-Medium.ttf"; sourceTree = "<group>"; };
+		095E30AA1BFE97AF005B3E11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Documents/temp/temp/Assets.xcassets; sourceTree = "<group>"; };
 		DC24B6AB1BFAAD90007E9664 /* Jogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC24B6AF1BFAAD90007E9664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC24B6B01BFAAD90007E9664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC24B6B31BFAAD90007E9664 /* Jogger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jogger.xcdatamodel; sourceTree = "<group>"; };
 		DC24B6B51BFAAD90007E9664 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DC24B6B81BFAAD90007E9664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DC24B6BA1BFAAD90007E9664 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DC24B6BD1BFAAD90007E9664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DC24B6C31BFAAD90007E9664 /* JoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC24B6C81BFAAD90007E9664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +79,10 @@
 		DC24B6A21BFAAD90007E9664 = {
 			isa = PBXGroup;
 			children = (
+				095E306E1BFE729A005B3E11 /* Lato-Medium.ttf */,
+				095E30681BFE70B0005B3E11 /* AppIcon@2x.png */,
+				095E30691BFE70B0005B3E11 /* AppIcon@3x.png */,
+				095E306A1BFE70B0005B3E11 /* Default@2x.png */,
 				DC24B6AD1BFAAD90007E9664 /* Jogger */,
 				DC24B6C61BFAAD90007E9664 /* JoggerTests */,
 				DC24B6AC1BFAAD90007E9664 /* Products */,
@@ -95,10 +105,9 @@
 				DC24B6B01BFAAD90007E9664 /* AppDelegate.swift */,
 				DC24B6B51BFAAD90007E9664 /* ViewController.swift */,
 				DC24B6DA1BFAAFA1007E9664 /* NewRunViewController.swift */,
+				095E30AA1BFE97AF005B3E11 /* Assets.xcassets */,
 				DC68D9091BFC394E00E73992 /* Stoplights.swift */,
 				DC24B6B71BFAAD90007E9664 /* Main.storyboard */,
-				DC24B6BA1BFAAD90007E9664 /* Images.xcassets */,
-				095E30261BFE643D005B3E11 /* Default@2x.png */,
 				DC24B6BC1BFAAD90007E9664 /* LaunchScreen.xib */,
 				DC24B6B21BFAAD90007E9664 /* Jogger.xcdatamodeld */,
 				DC24B6AE1BFAAD90007E9664 /* Supporting Files */,
@@ -230,10 +239,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCDC11571BFB1B2B0030BBF4 /* stoplights.json in Resources */,
+				095E306F1BFE729A005B3E11 /* Lato-Medium.ttf in Resources */,
 				DC24B6B91BFAAD90007E9664 /* Main.storyboard in Resources */,
-				095E30271BFE643D005B3E11 /* Default@2x.png in Resources */,
+				095E306C1BFE70B0005B3E11 /* AppIcon@3x.png in Resources */,
+				095E306B1BFE70B0005B3E11 /* AppIcon@2x.png in Resources */,
 				DC24B6BE1BFAAD90007E9664 /* LaunchScreen.xib in Resources */,
-				DC24B6BB1BFAAD90007E9664 /* Images.xcassets in Resources */,
+				095E30AB1BFE97AF005B3E11 /* Assets.xcassets in Resources */,
+				095E306D1BFE70B0005B3E11 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

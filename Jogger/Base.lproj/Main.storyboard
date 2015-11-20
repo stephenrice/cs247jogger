@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IcK-T2-u83">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C47a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IcK-T2-u83">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lato-Medium.ttf">
+            <string>Lato-Medium</string>
+            <string>Lato-Medium</string>
+            <string>Lato-Medium</string>
+            <string>Lato-Medium</string>
+            <string>Lato-Medium</string>
+            <string>Lato-Medium</string>
+            <string>Lato-Medium</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="wDX-kB-yO8">
@@ -31,17 +43,20 @@
                         <viewControllerLayoutGuide type="bottom" id="mvy-EV-oU1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GVU-jC-0ua">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZy-LZ-G8d">
-                                <rect key="frame" x="277" y="244" width="63" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZy-LZ-G8d">
+                                <rect key="frame" x="15" y="580" width="345" height="45"/>
                                 <animations/>
+                                <color key="backgroundColor" red="0.43137254899999999" green="0.79607843140000001" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="cxs-0U-n5v"/>
                                     <constraint firstAttribute="height" constant="109" id="qC1-GV-jGf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
-                                <state key="normal" title="Free Run">
+                                <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="20"/>
+                                <state key="normal" title="Ready to jog!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -58,6 +73,37 @@
                                     <segue destination="DOw-1H-jqe" kind="show" id="SrM-Qp-SnY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How would you like" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcA-gU-7ng">
+                                <rect key="frame" x="28" y="25" width="319" height="38"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="qLD-R8-XFj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="36"/>
+                                <color key="textColor" red="0.43137254901960786" green="0.79607843137254897" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="to jog today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wef-ud-45t">
+                                <rect key="frame" x="81" y="60" width="212.5" height="42"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="36"/>
+                                <color key="textColor" red="0.43137254901960786" green="0.79607843137254897" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Let me know with:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypv-yK-nZ2">
+                                <rect key="frame" x="20" y="263" width="172" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="20"/>
+                                <color key="textColor" red="0.49019607843137253" green="0.49019607843137253" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="I want to run for:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTI-P2-iuO">
+                                <rect key="frame" x="20" y="428" width="152" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="20"/>
+                                <color key="textColor" red="0.49019607843137253" green="0.49019607843137253" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="S1n-kC-fed">
                                 <rect key="frame" x="-61" y="-14" width="123" height="29"/>
                                 <animations/>
@@ -69,13 +115,77 @@
                                     <rect key="frame" x="139" y="286" width="123" height="29"/>
                                 </variation>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="I want to avoid:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oqm-M0-O2n">
+                                <rect key="frame" x="20" y="116" width="139" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="20"/>
+                                <color key="textColor" red="0.49019607843137253" green="0.49019607843137253" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8e-HL-EAz">
+                                <rect key="frame" x="100" y="154" width="72" height="91"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="CrowdsUnselected"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twd-Gn-0TG">
+                                <rect key="frame" x="190" y="153" width="88" height="92"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="TrafficUnselected"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uu8-s0-YKy">
+                                <rect key="frame" x="57" y="305" width="74" height="88"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="SoundsUnselected"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwY-Sy-VGc">
+                                <rect key="frame" x="139" y="305" width="93" height="88"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="NotificationsUnselected"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFg-3j-MSB">
+                                <rect key="frame" x="240" y="304" width="73" height="89.5"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="VibrationsUnselected"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBH-fJ-aIH">
+                                <rect key="frame" x="36" y="485" width="57" height="51"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="TimeButtonUnselected"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ign-Ge-Dgo">
+                                <rect key="frame" x="91" y="485" width="61" height="51"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="DistanceUnselected"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.5 miles" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r1m-tA-OKZ">
+                                <rect key="frame" x="180" y="496" width="142" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Ypv-yK-nZ2" firstAttribute="leading" secondItem="GVU-jC-0ua" secondAttribute="leadingMargin" id="1FS-X3-Oha"/>
+                            <constraint firstItem="XZy-LZ-G8d" firstAttribute="centerX" secondItem="GVU-jC-0ua" secondAttribute="centerX" id="6H6-cp-e6z"/>
+                            <constraint firstItem="mvy-EV-oU1" firstAttribute="top" secondItem="XZy-LZ-G8d" secondAttribute="bottom" constant="42" id="8lE-aD-htK"/>
+                            <constraint firstItem="EcA-gU-7ng" firstAttribute="leading" secondItem="GVU-jC-0ua" secondAttribute="leadingMargin" constant="12" id="B5Z-5D-BHG"/>
+                            <constraint firstItem="Oqm-M0-O2n" firstAttribute="leading" secondItem="GVU-jC-0ua" secondAttribute="leadingMargin" id="Q4U-Bh-Q8C"/>
+                            <constraint firstItem="hTI-P2-iuO" firstAttribute="top" secondItem="Ypv-yK-nZ2" secondAttribute="bottom" constant="144" id="V5u-aV-mLg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EcA-gU-7ng" secondAttribute="trailing" constant="12" id="WI0-nv-y17"/>
                             <constraint firstItem="XZy-LZ-G8d" firstAttribute="leading" secondItem="GVU-jC-0ua" secondAttribute="leadingMargin" constant="8" id="WaQ-x3-uUa"/>
+                            <constraint firstItem="hTI-P2-iuO" firstAttribute="leading" secondItem="GVU-jC-0ua" secondAttribute="leadingMargin" id="Xy3-8t-n9I"/>
+                            <constraint firstItem="Ypv-yK-nZ2" firstAttribute="top" secondItem="Oqm-M0-O2n" secondAttribute="bottom" constant="124" id="bHs-WB-wli"/>
+                            <constraint firstItem="Oqm-M0-O2n" firstAttribute="top" secondItem="Wef-ud-45t" secondAttribute="bottom" constant="14.5" id="d0S-ip-boh"/>
                             <constraint firstItem="XZy-LZ-G8d" firstAttribute="centerX" secondItem="GVU-jC-0ua" secondAttribute="centerX" id="d9a-qw-H44"/>
                             <constraint firstAttribute="bottom" secondItem="XZy-LZ-G8d" secondAttribute="bottom" constant="20" symbolic="YES" id="fWv-37-04w"/>
+                            <constraint firstItem="Ypv-yK-nZ2" firstAttribute="leading" secondItem="Oqm-M0-O2n" secondAttribute="leading" id="g6B-1P-S8R"/>
+                            <constraint firstItem="Wef-ud-45t" firstAttribute="top" secondItem="GVU-jC-0ua" secondAttribute="topMargin" constant="60" id="hRc-2B-7Qw"/>
+                            <constraint firstItem="hTI-P2-iuO" firstAttribute="leading" secondItem="Oqm-M0-O2n" secondAttribute="leading" id="il2-NU-aOJ"/>
+                            <constraint firstItem="EcA-gU-7ng" firstAttribute="centerX" secondItem="GVU-jC-0ua" secondAttribute="centerX" id="jbk-pi-Dk1"/>
+                            <constraint firstItem="EcA-gU-7ng" firstAttribute="top" secondItem="GVU-jC-0ua" secondAttribute="topMargin" constant="25" id="pHy-UU-mqN"/>
+                            <constraint firstItem="Wef-ud-45t" firstAttribute="centerX" secondItem="GVU-jC-0ua" secondAttribute="centerX" id="s88-ks-dqW"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -99,10 +209,12 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="I2d-OA-lP1"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rce-UG-bdw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="141"/>
+            <point key="canvasLocation" x="135.5" y="140.5"/>
         </scene>
         <!--New Run-->
         <scene sceneID="yYg-O4-kzi">
@@ -113,11 +225,11 @@
                         <viewControllerLayoutGuide type="bottom" id="kW8-F9-rOH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lYd-gB-czk">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHe-KF-OZi">
-                                <rect key="frame" x="263" y="545" width="74" height="35"/>
+                                <rect key="frame" x="150" y="612" width="74" height="35"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="74" id="OxY-xq-OhS"/>
@@ -144,7 +256,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Ready to Run?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gu-gR-Lds">
-                                <rect key="frame" x="272" y="79" width="42" height="21"/>
+                                <rect key="frame" x="194" y="79" width="120" height="21"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="3vW-82-OUt"/>
@@ -164,7 +276,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBJ-83-Izb">
-                                <rect key="frame" x="234" y="460" width="133" height="49"/>
+                                <rect key="frame" x="121" y="527" width="133" height="49"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="133" id="PBx-1n-RZn"/>
@@ -325,7 +437,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zj7-BS-nH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1117.5" y="141"/>
+            <point key="canvasLocation" x="1117.5" y="140.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CrowdsUnselected" width="207" height="264"/>
+        <image name="DistanceUnselected" width="104" height="90"/>
+        <image name="NotificationsUnselected" width="273" height="264"/>
+        <image name="SoundsUnselected" width="207" height="264"/>
+        <image name="TimeButtonUnselected" width="104" height="90"/>
+        <image name="TrafficUnselected" width="273" height="276"/>
+        <image name="VibrationsUnselected" width="213" height="264"/>
+    </resources>
 </document>

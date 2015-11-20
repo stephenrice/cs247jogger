@@ -10,8 +10,13 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController {
-    var managedObjectContext: NSManagedObjectContext?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationController?.navigationBarHidden = true
+    }
+    
+    var managedObjectContext: NSManagedObjectContext?
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.destinationViewController.isKindOfClass(NewRunViewController) {
             if let newRunViewController = segue.destinationViewController as? NewRunViewController {
