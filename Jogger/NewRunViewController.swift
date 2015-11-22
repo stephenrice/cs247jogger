@@ -18,8 +18,7 @@ let DetailSegueName = "RunDetails"
 
 class NewRunViewController: UIViewController {
     var managedObjectContext: NSManagedObjectContext?
-    
-    var run: Run!
+
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var paceLabel: UILabel!
