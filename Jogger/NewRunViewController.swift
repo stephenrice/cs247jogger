@@ -11,6 +11,7 @@ import CoreData
 import CoreLocation
 import HealthKit
 import MapKit
+import AVFoundation
 
 
 let DetailSegueName = "RunDetails"
@@ -19,8 +20,6 @@ class NewRunViewController: UIViewController {
     var managedObjectContext: NSManagedObjectContext?
     
     var run: Run!
-    
-    @IBOutlet weak var promptLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var paceLabel: UILabel!
@@ -28,8 +27,11 @@ class NewRunViewController: UIViewController {
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var mapView: MKMapView!
     
-    var seconds = 0.0
+    var seconds = 0
     var distance = 0.0
+    var paused = false
+    var usedStoplights = [Stoplight]()
+    var audioPlayer: AVAudioPlayer?
     
     lazy var locationManager: CLLocationManager = {
         var _locationManager = CLLocationManager()
@@ -50,12 +52,11 @@ class NewRunViewController: UIViewController {
         super.viewWillAppear(animated)
         
         startButton.hidden = false
-        promptLabel.hidden = false
         
         timeLabel.hidden = true
         distanceLabel.hidden = true
         paceLabel.hidden = true
-        stopButton.hidden = true
+        stopButton.hidden = false
         
         
         locationManager.requestAlwaysAuthorization()
@@ -67,15 +68,22 @@ class NewRunViewController: UIViewController {
     }
     
     func eachSecond(timer: NSTimer) {
+        if paused {
+            return
+        }
         seconds++
-        let secondsQuantity = HKQuantity(unit: HKUnit.secondUnit(), doubleValue: seconds)
-        timeLabel.text = "Time: " + secondsQuantity.description
-        let distanceQuantity = HKQuantity(unit: HKUnit.meterUnit(), doubleValue: distance)
-        distanceLabel.text = "Distance: " + distanceQuantity.description
+        //let secondsQuantity = HKQuantity(unit: HKUnit.secondUnit(), doubleValue: seconds)
+        var extraZero = ""
+        if seconds % 60 < 10 {
+            extraZero = "0"
+        }
+        let timeStr = "" + String(seconds/60) + ":" + extraZero + String(seconds % 60)
+        timeLabel.text = timeStr
         
-        let paceUnit = HKUnit.secondUnit().unitDividedByUnit(HKUnit.meterUnit())
-        let paceQuantity = HKQuantity(unit: paceUnit, doubleValue: seconds / distance)
-        paceLabel.text = "Pace: " + paceQuantity.description
+        let milesDistance = 0.000621371 * distance
+        distanceLabel.text = String(format: "%.2f", milesDistance)
+        
+        paceLabel.text = String(format: "%.2f", Double(seconds)/(60*milesDistance))
     }
     
     func startLocationUpdates() {
@@ -83,67 +91,38 @@ class NewRunViewController: UIViewController {
         locationManager.startUpdatingLocation()
     }
     
-    func saveRun() {
-        // 1
-        let savedRun = NSEntityDescription.insertNewObjectForEntityForName("Run",
-            inManagedObjectContext: managedObjectContext!) as! Run
-        savedRun.distance = distance
-        savedRun.duration = seconds
-        savedRun.timestamp = NSDate()
-        
-        // 2
-        var savedLocations = [Location]()
-        for location in locations {
-            let savedLocation = NSEntityDescription.insertNewObjectForEntityForName("Location",
-                inManagedObjectContext: managedObjectContext!) as! Location
-            savedLocation.timestamp = location.timestamp
-            savedLocation.latitude = location.coordinate.latitude
-            savedLocation.longitude = location.coordinate.longitude
-            savedLocations.append(savedLocation)
-        }
-        
-        savedRun.locations = NSOrderedSet(array: savedLocations)
-        run = savedRun
-        
-        // 3
-        //var error: NSError?
-        //let success =
-        do {
-            try self.managedObjectContext!.save()
-        }
-        catch {
-            //ignore for the moment
-        }
-
-        //if !success {
-        //    print("Could not save the run!")
-        //}
-    }
     
     @IBAction func startPressed(sender: AnyObject) {
-        startButton.hidden = true
-        promptLabel.hidden = true
-        
-        timeLabel.hidden = false
-        distanceLabel.hidden = false
-        paceLabel.hidden = false
-        stopButton.hidden = false
-        
-        seconds = 0.0
-        distance = 0.0
-        locations.removeAll(keepCapacity: false)
-        timer = NSTimer.scheduledTimerWithTimeInterval(1,
-            target: self,
-            selector: "eachSecond:",
-            userInfo: nil,
-            repeats: true)
-        startLocationUpdates()
+        if paused {
+            paused = false
+            startButton.setTitle("Pause", forState: .Normal)
+        } else if startButton.titleLabel?.text == "Pause" {
+            paused = true
+            startButton.setTitle("Resume", forState: .Normal)
+        } else {
+            timeLabel.hidden = false
+            distanceLabel.hidden = false
+            paceLabel.hidden = false
+            stopButton.alpha = CGFloat(1)
+            startButton.setTitle("Pause", forState: .Normal)
+            seconds = 0
+            distance = 0.0
+            locations.removeAll(keepCapacity: false)
+            timer = NSTimer.scheduledTimerWithTimeInterval(1,
+                target: self,
+                selector: "eachSecond:",
+                userInfo: nil,
+                repeats: true)
+            startLocationUpdates()
+        }
     }
     
     @IBAction func stopPressed(sender: AnyObject) {
-        let actionSheet = UIActionSheet(title: "Run Stopped", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "Save", "Discard")
+        let actionSheet = UIActionSheet(title: "Run Stopped", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "Use Data to Improve Jogger", "Discard Run Data")
         actionSheet.actionSheetStyle = .Default
         actionSheet.showInView(view)
+        startButton.titleLabel?.text = "Start"
+        stopButton.alpha = CGFloat(0.5)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -158,7 +137,7 @@ extension NewRunViewController: UIActionSheetDelegate {
     func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
         //save
         if buttonIndex == 1 {
-            performSegueWithIdentifier(DetailSegueName, sender: nil)
+            navigationController?.popToRootViewControllerAnimated(true)
         }
             //discard
         else if buttonIndex == 2 {
@@ -193,16 +172,32 @@ extension NewRunViewController: CLLocationManagerDelegate {
                 self.locations.append(location)
             }
             for stoplight in stoplights {
-                if stoplight.distanceFromLocation(location) <= 1000{
+                if stoplight.location.distanceFromLocation(location) <= 10000000000 &&
+                    !usedStoplights.contains({ (light: Stoplight) -> Bool in
+                        if stoplight.location == light.location {
+                            return true;
+                        }
+                        return false
+                }) {
+                    usedStoplights.append(stoplight)
                     // create a corresponding local notification
-                    var notification = UILocalNotification()
-                    notification.alertBody = "Turn right to avoid stoplight." // text that will be displayed in the notification
-                    notification.alertAction = "view" // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
-                    notification.fireDate = NSDate() // todo item due date (when notification will be fired)
-                    notification.soundName = UILocalNotificationDefaultSoundName // play default sound
-                    //notification.userInfo = ["UUID": item.UUID, ] // assign a unique identifier to the notification so that we can retrieve it later
+                    let notification = UILocalNotification()
+                    notification.alertBody = stoplight.directionStr // text that will be displayed in the notification
+                    print(stoplight.directionStr)
+                    //notification.userInfo = ["UUID": item.UUID, ]
                     notification.category = "TODO_CATEGORY"
-                    UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                    UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+                    
+                    
+                    let sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(stoplight.audioName, ofType: "caf")!)
+                    do {
+                        self.audioPlayer = try AVAudioPlayer(contentsOfURL: sound, fileTypeHint: nil)
+                        audioPlayer!.prepareToPlay()
+                        audioPlayer!.play()
+                        print("playing audio")
+                    } catch {
+                        //nil
+                    }
                 }
             }
         }

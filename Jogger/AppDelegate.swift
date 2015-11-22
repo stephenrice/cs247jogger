@@ -8,17 +8,34 @@
 
 import UIKit
 import CoreData
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var audioPlayer: AVAudioPlayer?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil))  // types are UIUserNotificationType members
         return true
+    }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        // Grab the path, make sure to add it to your project!
+        /*var sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("test_turnright", ofType: "caf")!)
+        do {
+            self.audioPlayer = try AVAudioPlayer(contentsOfURL: sound, fileTypeHint: nil)
+            audioPlayer!.prepareToPlay()
+            audioPlayer!.play()
+            print("playing audio")
+        } catch {
+            //nil
+        }*/
+        
+
     }
 
     func applicationWillResignActive(application: UIApplication) {
