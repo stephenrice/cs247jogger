@@ -394,8 +394,8 @@
                                 <exclude reference="hBU-h2-jrZ"/>
                                 <exclude reference="jmk-XC-kKy"/>
                                 <exclude reference="ucr-MS-fyJ"/>
-                                <exclude reference="QCq-kE-13J"/>
                                 <exclude reference="CJS-cw-zCZ"/>
+                                <exclude reference="QCq-kE-13J"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -453,11 +453,11 @@
                                 <include reference="hBU-h2-jrZ"/>
                                 <include reference="jmk-XC-kKy"/>
                                 <include reference="ucr-MS-fyJ"/>
-                                <include reference="QCq-kE-13J"/>
                                 <include reference="CJS-cw-zCZ"/>
                                 <exclude reference="fh7-A3-koP"/>
                                 <exclude reference="t5i-bP-Psp"/>
                                 <exclude reference="xfi-9V-8LG"/>
+                                <include reference="QCq-kE-13J"/>
                             </mask>
                         </variation>
                     </view>
