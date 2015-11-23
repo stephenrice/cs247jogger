@@ -12,6 +12,7 @@ import CoreLocation
 import HealthKit
 import MapKit
 import AVFoundation
+import AudioToolbox
 
 
 let DetailSegueName = "RunDetails"
@@ -31,6 +32,10 @@ class NewRunViewController: UIViewController {
     var paused = false
     var usedStoplights = [Stoplight]()
     var audioPlayer: AVAudioPlayer?
+    
+    var soundNotifications = false
+    var visualNotifications = false
+    var hapticNotifications = false
     
     lazy var locationManager: CLLocationManager = {
         var _locationManager = CLLocationManager()
@@ -179,24 +184,32 @@ extension NewRunViewController: CLLocationManagerDelegate {
                         return false
                 }) {
                     usedStoplights.append(stoplight)
-                    // create a corresponding local notification
-                    let notification = UILocalNotification()
-                    notification.alertBody = stoplight.directionStr // text that will be displayed in the notification
-                    print(stoplight.directionStr)
-                    //notification.userInfo = ["UUID": item.UUID, ]
-                    notification.category = "TODO_CATEGORY"
-                    UIApplication.sharedApplication().presentLocalNotificationNow(notification)
                     
-                    
-                    let sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(stoplight.audioName, ofType: "caf")!)
-                    do {
-                        self.audioPlayer = try AVAudioPlayer(contentsOfURL: sound, fileTypeHint: nil)
-                        audioPlayer!.prepareToPlay()
-                        audioPlayer!.play()
-                        print("playing audio")
-                    } catch {
-                        //nil
+                    if visualNotifications {
+                        // create a corresponding local notification
+                        let notification = UILocalNotification()
+                        notification.alertBody = stoplight.directionStr // text that will be displayed in the notification
+                        print(stoplight.directionStr)
+                        //notification.userInfo = ["UUID": item.UUID, ]
+                        notification.category = "TODO_CATEGORY"
+                        UIApplication.sharedApplication().presentLocalNotificationNow(notification)
                     }
+                    
+                    if soundNotifications {
+                        let sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(stoplight.audioName, ofType: "caf")!)
+                        do {
+                            self.audioPlayer = try AVAudioPlayer(contentsOfURL: sound, fileTypeHint: nil)
+                            audioPlayer!.prepareToPlay()
+                            audioPlayer!.play()
+                            print("playing audio")
+                        } catch {
+                            //nil
+                        }
+                    }
+                    if hapticNotifications {
+                        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                    }
+                    
                 }
             }
         }
