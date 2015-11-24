@@ -18,6 +18,7 @@
 		DC24B6CA1BFAAD90007E9664 /* JoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6C91BFAAD90007E9664 /* JoggerTests.swift */; };
 		DC24B6DB1BFAAFA1007E9664 /* NewRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6DA1BFAAFA1007E9664 /* NewRunViewController.swift */; };
 		DC68D90A1BFC394E00E73992 /* Stoplights.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D9091BFC394E00E73992 /* Stoplights.swift */; };
+		DCC1251B1C02F9B400C9B8F8 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC1251A1C02F9B400C9B8F8 /* Route.swift */; };
 		DCDC11571BFB1B2B0030BBF4 /* stoplights.json in Resources */ = {isa = PBXBuildFile; fileRef = DCDC11561BFB1B2B0030BBF4 /* stoplights.json */; };
 		DCECF8A61C0011E400B8D74C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCECF8A51C0011E400B8D74C /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		DC24B6C91BFAAD90007E9664 /* JoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoggerTests.swift; sourceTree = "<group>"; };
 		DC24B6DA1BFAAFA1007E9664 /* NewRunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRunViewController.swift; sourceTree = "<group>"; };
 		DC68D9091BFC394E00E73992 /* Stoplights.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stoplights.swift; sourceTree = "<group>"; };
+		DCC1251A1C02F9B400C9B8F8 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		DCDC11561BFB1B2B0030BBF4 /* stoplights.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stoplights.json; sourceTree = "<group>"; };
 		DCECF8A51C0011E400B8D74C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 				DC24B6B51BFAAD90007E9664 /* ViewController.swift */,
 				DC24B6DA1BFAAFA1007E9664 /* NewRunViewController.swift */,
 				DC68D9091BFC394E00E73992 /* Stoplights.swift */,
+				DCC1251A1C02F9B400C9B8F8 /* Route.swift */,
 				DC24B6B71BFAAD90007E9664 /* Main.storyboard */,
 				DC24B6BA1BFAAD90007E9664 /* Images.xcassets */,
 				DC24B6BC1BFAAD90007E9664 /* LaunchScreen.xib */,
@@ -259,6 +262,7 @@
 				DC24B6B61BFAAD90007E9664 /* ViewController.swift in Sources */,
 				DC24B6DB1BFAAFA1007E9664 /* NewRunViewController.swift in Sources */,
 				DC24B6B11BFAAD90007E9664 /* AppDelegate.swift in Sources */,
+				DCC1251B1C02F9B400C9B8F8 /* Route.swift in Sources */,
 				DC24B6B41BFAAD90007E9664 /* Jogger.xcdatamodeld in Sources */,
 				DC68D90A1BFC394E00E73992 /* Stoplights.swift in Sources */,
 			);

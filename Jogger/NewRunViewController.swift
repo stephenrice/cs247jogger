@@ -63,6 +63,16 @@ class NewRunViewController: UIViewController {
         stopButton.hidden = false
         
         
+        var coords = [CLLocationCoordinate2D]()
+        for location in route {
+            coords.append(location.coordinate)
+        }
+        
+        let region = MKCoordinateRegionMakeWithDistance(route.last!.coordinate, 500, 500)
+        mapView.setRegion(region, animated: true)
+        mapView.addOverlay(MKPolyline(coordinates: &coords, count: coords.count))
+        
+        
         locationManager.requestAlwaysAuthorization()
     }
     
@@ -226,8 +236,14 @@ extension NewRunViewController: MKMapViewDelegate {
         
         let polyline = overlay as! MKPolyline
         let renderer = MKPolylineRenderer(polyline: polyline)
-        renderer.strokeColor = UIColor.blueColor()
-        renderer.lineWidth = 5
+        if seconds > 0 {
+            renderer.strokeColor = UIColor.blueColor()
+            renderer.lineWidth = 5
+        } else {
+            renderer.strokeColor = UIColor.grayColor()
+            renderer.lineWidth = 8
+        }
+        
         return renderer
     }
 }
