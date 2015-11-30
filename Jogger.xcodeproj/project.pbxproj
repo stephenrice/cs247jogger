@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		095529CB1C0C346B000B5F6A /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 095529CA1C0C346B000B5F6A /* Lato-Regular.ttf */; };
 		095529CC1C0C346B000B5F6A /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 095529CA1C0C346B000B5F6A /* Lato-Regular.ttf */; };
+		095529CE1C0D106F000B5F6A /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 095529CD1C0D106F000B5F6A /* Lato-Regular.ttf */; };
 		DC16B2BC1C01497500F55936 /* test_turnright.caf in Resources */ = {isa = PBXBuildFile; fileRef = DC16B2BB1C01495500F55936 /* test_turnright.caf */; };
 		DC16B2BE1C014A2D00F55936 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC16B2BD1C014A2D00F55936 /* AVFoundation.framework */; };
 		DC24B6B11BFAAD90007E9664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6B01BFAAD90007E9664 /* AppDelegate.swift */; };
@@ -19,7 +20,6 @@
 		DC24B6BE1BFAAD90007E9664 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC24B6BC1BFAAD90007E9664 /* LaunchScreen.xib */; };
 		DC24B6CA1BFAAD90007E9664 /* JoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6C91BFAAD90007E9664 /* JoggerTests.swift */; };
 		DC24B6DB1BFAAFA1007E9664 /* NewRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6DA1BFAAFA1007E9664 /* NewRunViewController.swift */; };
-		DC4A626D1C0C26C50005C2FC /* 3343712.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DC4A626C1C0C26C50005C2FC /* 3343712.gpx */; };
 		DC68D90A1BFC394E00E73992 /* Stoplights.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D9091BFC394E00E73992 /* Stoplights.swift */; };
 		DCC1251B1C02F9B400C9B8F8 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC1251A1C02F9B400C9B8F8 /* Route.swift */; };
 		DCECF8A61C0011E400B8D74C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCECF8A51C0011E400B8D74C /* Images.xcassets */; };
@@ -37,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		095529CA1C0C346B000B5F6A /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		095529CD1C0D106F000B5F6A /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		DC16B2BA1C01495500F55936 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = Base.lproj/test_turnright.caf; sourceTree = "<group>"; };
 		DC16B2BD1C014A2D00F55936 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		DC24B6AB1BFAAD90007E9664 /* Jogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,7 +52,6 @@
 		DC24B6C81BFAAD90007E9664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC24B6C91BFAAD90007E9664 /* JoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoggerTests.swift; sourceTree = "<group>"; };
 		DC24B6DA1BFAAFA1007E9664 /* NewRunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRunViewController.swift; sourceTree = "<group>"; };
-		DC4A626C1C0C26C50005C2FC /* 3343712.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = 3343712.gpx; path = ../../../../Downloads/3343712.gpx; sourceTree = "<group>"; };
 		DC68D9091BFC394E00E73992 /* Stoplights.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stoplights.swift; sourceTree = "<group>"; };
 		DCC1251A1C02F9B400C9B8F8 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		DCECF8A51C0011E400B8D74C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		DC24B6A21BFAAD90007E9664 = {
 			isa = PBXGroup;
 			children = (
-				DC4A626C1C0C26C50005C2FC /* 3343712.gpx */,
+				095529CD1C0D106F000B5F6A /* Lato-Regular.ttf */,
 				DC16B2BD1C014A2D00F55936 /* AVFoundation.framework */,
 				DCECF8A51C0011E400B8D74C /* Images.xcassets */,
 				DC24B6AD1BFAAD90007E9664 /* Jogger */,
@@ -243,9 +243,9 @@
 				095529CB1C0C346B000B5F6A /* Lato-Regular.ttf in Resources */,
 				DCECF8A61C0011E400B8D74C /* Images.xcassets in Resources */,
 				DC24B6B91BFAAD90007E9664 /* Main.storyboard in Resources */,
+				095529CE1C0D106F000B5F6A /* Lato-Regular.ttf in Resources */,
 				DC24B6BE1BFAAD90007E9664 /* LaunchScreen.xib in Resources */,
 				DC24B6BB1BFAAD90007E9664 /* Images.xcassets in Resources */,
-				DC4A626D1C0C26C50005C2FC /* 3343712.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
