@@ -90,7 +90,10 @@ class NewRunViewController: UIViewController {
         let milesDistance = 0.000621371 * distance
         distanceLabel.text = String(format: "%.2f", milesDistance)
         
-        paceLabel.text = String(format: "%.2f", Double(seconds)/(60*milesDistance))
+        if milesDistance > 0.0 {
+            paceLabel.text = String(format: "%.2f", Double(seconds)/(60*milesDistance))
+        }
+        
     }
     
     
