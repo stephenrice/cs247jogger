@@ -42,6 +42,8 @@ class NewRunViewController: UIViewController {
         _locationManager.delegate = self
         _locationManager.desiredAccuracy = kCLLocationAccuracyBest
         _locationManager.activityType = .Fitness
+        _locationManager.allowsBackgroundLocationUpdates = true
+
         
         // Movement threshold for new events
         _locationManager.distanceFilter = 10.0
@@ -100,11 +102,6 @@ class NewRunViewController: UIViewController {
         paceLabel.text = String(format: "%.2f", Double(seconds)/(60*milesDistance))
     }
     
-    func startLocationUpdates() {
-        // Here, the location manager will be lazily instantiated
-        locationManager.startUpdatingLocation()
-    }
-    
     
     @IBAction func startPressed(sender: AnyObject) {
         if paused {
@@ -127,7 +124,7 @@ class NewRunViewController: UIViewController {
                 selector: "eachSecond:",
                 userInfo: nil,
                 repeats: true)
-            startLocationUpdates()
+            locationManager.startUpdatingLocation()
         }
     }
     
@@ -137,6 +134,7 @@ class NewRunViewController: UIViewController {
         actionSheet.showInView(view)
         startButton.titleLabel?.text = "Start"
         stopButton.alpha = CGFloat(0.5)
+        usedStoplights = []
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -186,7 +184,7 @@ extension NewRunViewController: CLLocationManagerDelegate {
                 self.locations.append(location)
             }
             for stoplight in stoplights {
-                if stoplight.location.distanceFromLocation(location) <= 10000000000 &&
+                if stoplight.location.distanceFromLocation(location) <= 100 &&
                     !usedStoplights.contains({ (light: Stoplight) -> Bool in
                         if stoplight.location == light.location {
                             return true;
