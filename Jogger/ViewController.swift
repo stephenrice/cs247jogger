@@ -56,7 +56,6 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.destinationViewController.isKindOfClass(NewRunViewController) {
             if let newRunViewController = segue.destinationViewController as? NewRunViewController {
-                newRunViewController.managedObjectContext = managedObjectContext
                 newRunViewController.soundNotifications = audio
                 newRunViewController.visualNotifications = visual
                 newRunViewController.hapticNotifications = haptic

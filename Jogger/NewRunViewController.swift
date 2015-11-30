@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 import CoreLocation
 import HealthKit
 import MapKit
@@ -18,8 +17,6 @@ import AudioToolbox
 let DetailSegueName = "RunDetails"
 
 class NewRunViewController: UIViewController {
-    var managedObjectContext: NSManagedObjectContext?
-
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var paceLabel: UILabel!
@@ -36,6 +33,7 @@ class NewRunViewController: UIViewController {
     var soundNotifications = false
     var visualNotifications = false
     var hapticNotifications = false
+    let synth = AVSpeechSynthesizer()
     
     lazy var locationManager: CLLocationManager = {
         var _locationManager = CLLocationManager()
@@ -43,12 +41,9 @@ class NewRunViewController: UIViewController {
         _locationManager.desiredAccuracy = kCLLocationAccuracyBest
         _locationManager.activityType = .Fitness
         _locationManager.allowsBackgroundLocationUpdates = true
-
-        
-        // Movement threshold for new events
-        _locationManager.distanceFilter = 10.0
+        _locationManager.distanceFilter = 5.0
         return _locationManager
-        }()
+    }()
     
     lazy var locations = [CLLocation]()
     lazy var timer = NSTimer()
@@ -58,12 +53,11 @@ class NewRunViewController: UIViewController {
         super.viewWillAppear(animated)
         
         startButton.hidden = false
-        
+
         timeLabel.hidden = true
         distanceLabel.hidden = true
         paceLabel.hidden = true
         stopButton.hidden = false
-        
         
         var coords = [CLLocationCoordinate2D]()
         for location in route {
@@ -73,8 +67,6 @@ class NewRunViewController: UIViewController {
         let region = MKCoordinateRegionMakeWithDistance(route.last!.coordinate, 500, 500)
         mapView.setRegion(region, animated: true)
         mapView.addOverlay(MKPolyline(coordinates: &coords, count: coords.count))
-        
-        
         locationManager.requestAlwaysAuthorization()
     }
     
@@ -88,7 +80,6 @@ class NewRunViewController: UIViewController {
             return
         }
         seconds++
-        //let secondsQuantity = HKQuantity(unit: HKUnit.secondUnit(), doubleValue: seconds)
         var extraZero = ""
         if seconds % 60 < 10 {
             extraZero = "0"
@@ -137,11 +128,6 @@ class NewRunViewController: UIViewController {
         usedStoplights = []
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        //if let detailViewController = segue.destinationViewController as? DetailViewController {
-          //  detailViewController.run = run
-        //}
-    }
 }
 
 // MARK: UIActionSheetDelegate
@@ -151,7 +137,7 @@ extension NewRunViewController: UIActionSheetDelegate {
         if buttonIndex == 1 {
             navigationController?.popToRootViewControllerAnimated(true)
         }
-            //discard
+        //discard
         else if buttonIndex == 2 {
             navigationController?.popToRootViewControllerAnimated(true)
         }
@@ -204,12 +190,14 @@ extension NewRunViewController: CLLocationManagerDelegate {
                     }
                     
                     if soundNotifications {
-                        let sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(stoplight.audioName, ofType: "caf")!)
+                        //let sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(stoplight.audioName, ofType: "caf")!)
                         do {
-                            self.audioPlayer = try AVAudioPlayer(contentsOfURL: sound, fileTypeHint: nil)
-                            audioPlayer!.prepareToPlay()
-                            audioPlayer!.play()
-                            print("playing audio")
+//                            self.audioPlayer = try AVAudioPlayer(contentsOfURL: sound, fileTypeHint: nil)
+//                            audioPlayer!.prepareToPlay()
+//                            audioPlayer!.play()
+                            let audioSpeech = AVSpeechUtterance(string: stoplight.directionStr)
+                            audioSpeech.rate = 0.4
+                            synth.speakUtterance(audioSpeech)
                         } catch {
                             //nil
                         }
