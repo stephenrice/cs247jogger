@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		095529CB1C0C346B000B5F6A /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 095529CA1C0C346B000B5F6A /* Lato-Regular.ttf */; };
+		095529CC1C0C346B000B5F6A /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 095529CA1C0C346B000B5F6A /* Lato-Regular.ttf */; };
 		DC16B2BC1C01497500F55936 /* test_turnright.caf in Resources */ = {isa = PBXBuildFile; fileRef = DC16B2BB1C01495500F55936 /* test_turnright.caf */; };
 		DC16B2BE1C014A2D00F55936 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC16B2BD1C014A2D00F55936 /* AVFoundation.framework */; };
 		DC24B6B11BFAAD90007E9664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC24B6B01BFAAD90007E9664 /* AppDelegate.swift */; };
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		095529CA1C0C346B000B5F6A /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		DC16B2BA1C01495500F55936 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = Base.lproj/test_turnright.caf; sourceTree = "<group>"; };
 		DC16B2BD1C014A2D00F55936 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		DC24B6AB1BFAAD90007E9664 /* Jogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,7 +199,7 @@
 				TargetAttributes = {
 					DC24B6AA1BFAAD90007E9664 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = 8DRZ8YW7XP;
+						DevelopmentTeam = GVKT26DYR7;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC16B2BC1C01497500F55936 /* test_turnright.caf in Resources */,
+				095529CB1C0C346B000B5F6A /* Lato-Regular.ttf in Resources */,
 				DCECF8A61C0011E400B8D74C /* Images.xcassets in Resources */,
 				DC24B6B91BFAAD90007E9664 /* Main.storyboard in Resources */,
 				DC24B6BE1BFAAD90007E9664 /* LaunchScreen.xib in Resources */,
@@ -249,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				095529CC1C0C346B000B5F6A /* Lato-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
