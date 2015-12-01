@@ -16,14 +16,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var audioButton: UIButton!
     @IBOutlet weak var visualButton: UIButton!
     @IBOutlet weak var hapticButton: UIButton!
+    @IBOutlet weak var timeButton: UIButton!
+    
+    @IBOutlet weak var distanceButton: UIButton!
+    
+    @IBOutlet weak var milesOrMinLabel: UILabel!
     
     @IBAction func onAudio(sender: AnyObject) {
         if audio {
             audio = false
-            audioButton.alpha = CGFloat(0.4)
+            audioButton.selected = false
+            //audioButton.alpha = CGFloat(1)
         } else {
             audio = true
-            audioButton.alpha = CGFloat(1)
+            audioButton.selected = true
+            //audioButton.alpha = CGFloat(1)
         }
     }
     
@@ -31,27 +38,53 @@ class ViewController: UIViewController {
     @IBAction func onHaptic(sender: AnyObject) {
         if haptic {
             haptic = false
-            hapticButton.alpha = CGFloat(0.4)
+            hapticButton.selected = false
+            //hapticButton.alpha = CGFloat(0.4)
         } else {
             haptic = true
-            hapticButton.alpha = CGFloat(1)
+            hapticButton.selected = true
+            //hapticButton.alpha = CGFloat(1)
         }
     }
     
     @IBAction func onVisual(sender: AnyObject) {
         if visual {
             visual = false
-            visualButton.alpha = CGFloat(0.4)
+            visualButton.selected = false
+            //visualButton.alpha = CGFloat(0.4)
         } else {
             visual = true
-            visualButton.alpha = CGFloat(1)
+            visualButton.selected = true
+            //visualButton.alpha = CGFloat(1)
         }
     }
     
+    @IBAction func onTime(sender: AnyObject) {
+        if !time {
+            time = true
+            timeButton.selected = true
+            distance = false
+            distanceButton.selected = false
+            milesOrMinLabel.text = "minutes"
+        }
+    }
+    
+    @IBAction func onDistance(sender: AnyObject) {
+        if !distance {
+            distance = true
+            distanceButton.selected = true
+            time = false
+            timeButton.selected = false
+            milesOrMinLabel.text = "miles"
+        }
+    }
     
     var audio = false
     var visual = false
     var haptic = false
+    
+    var time = false
+    var distance = false
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.destinationViewController.isKindOfClass(NewRunViewController) {
