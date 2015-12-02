@@ -324,7 +324,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="63" id="ay0-d8-zT8"/>
                                     <constraint firstAttribute="height" constant="81" id="oZ7-RM-X6m">
-                                        <variation key="widthClass=compact" constant="97"/>
+                                        <variation key="widthClass=compact" constant="102"/>
                                     </constraint>
                                 </constraints>
                                 <state key="normal" image="ObstaclesUnselected"/>
@@ -385,7 +385,7 @@
                             <constraint firstItem="BmU-YI-wuw" firstAttribute="top" secondItem="X3n-0J-OXe" secondAttribute="bottom" constant="24" id="RTz-UN-Bnp"/>
                             <constraint firstItem="Dkb-5x-Ukq" firstAttribute="leading" secondItem="GVU-jC-0ua" secondAttribute="leadingMargin" constant="25" id="Skz-Oq-INV"/>
                             <constraint firstItem="AYT-UZ-BLy" firstAttribute="top" secondItem="4rD-65-KFd" secondAttribute="bottom" constant="63" id="T1E-Er-Bsz">
-                                <variation key="widthClass=compact" constant="47"/>
+                                <variation key="widthClass=compact" constant="42"/>
                             </constraint>
                             <constraint firstItem="Skw-qL-Xwk" firstAttribute="leading" secondItem="GVU-jC-0ua" secondAttribute="leadingMargin" id="ZjC-Cx-VL6"/>
                             <constraint firstItem="XZy-LZ-G8d" firstAttribute="centerX" secondItem="GVU-jC-0ua" secondAttribute="centerX" id="bwi-aE-kkn"/>
@@ -680,11 +680,25 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMC-Dr-pqR">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="2HU-ov-5lJ"/>
+                                    <constraint firstAttribute="height" constant="58" id="gf1-Ne-Ss1"/>
+                                </constraints>
                                 <state key="normal" image="ReportObstacles">
                                     <color key="titleShadowColor" red="0.37191506410256414" green="0.37191506410256414" blue="0.37191506410256414" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2HU-ov-5lJ"/>
+                                        <exclude reference="gf1-Ne-Ss1"/>
+                                    </mask>
+                                </variation>
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="313" y="428" width="58" height="58"/>
+                                    <mask key="constraints">
+                                        <include reference="2HU-ov-5lJ"/>
+                                        <include reference="gf1-Ne-Ss1"/>
+                                    </mask>
                                 </variation>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EE9-iM-5li">
