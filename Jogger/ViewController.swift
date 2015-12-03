@@ -12,14 +12,16 @@ import CoreData
 class ViewController: UIViewController {
     var managedObjectContext: NSManagedObjectContext?
     
+    @IBOutlet weak var crowdsButton: UIButton!
+    @IBOutlet weak var trafficButton: UIButton!
+    @IBOutlet weak var sidewalkButton: UIButton!
     
     @IBOutlet weak var audioButton: UIButton!
     @IBOutlet weak var visualButton: UIButton!
     @IBOutlet weak var hapticButton: UIButton!
+    
     @IBOutlet weak var timeButton: UIButton!
-    
     @IBOutlet weak var distanceButton: UIButton!
-    
     @IBOutlet weak var milesOrMinLabel: UILabel!
     
     @IBAction func onAudio(sender: AnyObject) {
@@ -59,6 +61,42 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func onCrowds(sender: AnyObject) {
+        if crowds {
+            crowds = false
+            crowdsButton.selected = false
+            //visualButton.alpha = CGFloat(0.4)
+        } else {
+            crowds = true
+            crowdsButton.selected = true
+            //visualButton.alpha = CGFloat(1)
+        }
+    }
+    
+    @IBAction func onTraffic(sender: AnyObject) {
+        if traffic {
+            traffic = false
+            trafficButton.selected = false
+            //visualButton.alpha = CGFloat(0.4)
+        } else {
+            traffic = true
+            trafficButton.selected = true
+            //visualButton.alpha = CGFloat(1)
+        }
+    }
+    
+    @IBAction func onSidewalk(sender: AnyObject) {
+        if sidewalk {
+            sidewalk = false
+            sidewalkButton.selected = false
+            //visualButton.alpha = CGFloat(0.4)
+        } else {
+            sidewalk = true
+            sidewalkButton.selected = true
+            //visualButton.alpha = CGFloat(1)
+        }
+    }
+    
     @IBAction func onTime(sender: AnyObject) {
         if !time {
             time = true
@@ -82,6 +120,10 @@ class ViewController: UIViewController {
     var audio = false
     var visual = false
     var haptic = false
+    
+    var crowds = false
+    var traffic = false
+    var sidewalk = false
     
     var time = false
     var distance = false

@@ -201,6 +201,9 @@
                                         <include reference="ZTI-3v-YN3"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="onCrowds:" destination="RFV-5w-XaS" eventType="touchUpInside" id="092-Mz-xgY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmU-YI-wuw">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -223,6 +226,9 @@
                                         <include reference="nOu-U6-Xws"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="onTraffic:" destination="RFV-5w-XaS" eventType="touchUpInside" id="qjv-aL-fUQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How would you like to jog today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLi-AD-kaa">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -280,35 +286,33 @@
                                 <state key="normal" image="DistanceUnselected"/>
                                 <state key="selected" image="DistanceSelected"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="77" y="527" width="41" height="30"/>
+                                    <rect key="frame" x="79" y="527" width="41" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="onDistance:" destination="RFV-5w-XaS" eventType="touchUpInside" id="nk7-JQ-wQD"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="OaN-c4-9cz">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="141" y="527" width="124" height="30"/>
+                                </variation>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwG-Bz-jkF">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" image="TimeButtonUnselected"/>
                                 <state key="selected" image="TimeSelected"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="39" y="527" width="38" height="30"/>
+                                    <rect key="frame" x="41" y="527" width="38" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="onTime:" destination="RFV-5w-XaS" eventType="touchUpInside" id="S64-9u-nFG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="miles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emR-Jv-WfP">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
-                                <color key="textColor" red="0.43137254901960786" green="0.79607843137254897" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
-                                    <rect key="frame" x="269" y="531" width="67" height="21"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rD-65-KFd">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
@@ -332,6 +336,9 @@
                                         <include reference="oZ7-RM-X6m"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="onSidewalk:" destination="RFV-5w-XaS" eventType="touchUpInside" id="yep-O3-40Z"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'd like to run for:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Un9-Gf-8hx">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -356,15 +363,17 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="OaN-c4-9cz">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="miles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emR-Jv-WfP">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
+                                <color key="textColor" red="0.43137254901960786" green="0.79607843137254897" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="146" y="527" width="101" height="30"/>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
+                                    <rect key="frame" x="280" y="531" width="60" height="21"/>
                                 </variation>
-                            </textField>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -412,11 +421,11 @@
                                 <exclude reference="KLi-AD-kaa"/>
                                 <exclude reference="AYT-UZ-BLy"/>
                                 <exclude reference="YSc-eE-ZwQ"/>
+                                <exclude reference="OaN-c4-9cz"/>
                                 <exclude reference="gwG-Bz-jkF"/>
-                                <exclude reference="emR-Jv-WfP"/>
                                 <exclude reference="4rD-65-KFd"/>
                                 <exclude reference="Un9-Gf-8hx"/>
-                                <exclude reference="OaN-c4-9cz"/>
+                                <exclude reference="emR-Jv-WfP"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="483-uq-MFb"/>
@@ -457,11 +466,11 @@
                                 <include reference="KLi-AD-kaa"/>
                                 <include reference="AYT-UZ-BLy"/>
                                 <include reference="YSc-eE-ZwQ"/>
+                                <include reference="OaN-c4-9cz"/>
                                 <include reference="gwG-Bz-jkF"/>
-                                <include reference="emR-Jv-WfP"/>
                                 <include reference="4rD-65-KFd"/>
                                 <include reference="Un9-Gf-8hx"/>
-                                <include reference="OaN-c4-9cz"/>
+                                <include reference="emR-Jv-WfP"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="483-uq-MFb"/>
@@ -496,10 +505,13 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="audioButton" destination="Dkb-5x-Ukq" id="L4e-Tw-jVv"/>
+                        <outlet property="crowdsButton" destination="WPh-f3-dx8" id="44g-vF-vdp"/>
                         <outlet property="distanceButton" destination="YSc-eE-ZwQ" id="4Ij-YR-0NJ"/>
                         <outlet property="hapticButton" destination="AYT-UZ-BLy" id="ADs-PH-vEe"/>
                         <outlet property="milesOrMinLabel" destination="emR-Jv-WfP" id="KNX-Cu-2kf"/>
+                        <outlet property="sidewalkButton" destination="4rD-65-KFd" id="OIq-Nd-LvA"/>
                         <outlet property="timeButton" destination="gwG-Bz-jkF" id="np0-Ox-VDb"/>
+                        <outlet property="trafficButton" destination="BmU-YI-wuw" id="m5r-42-YpA"/>
                         <outlet property="visualButton" destination="0wS-DB-NKs" id="b59-ud-c5o"/>
                     </connections>
                 </viewController>
@@ -583,8 +595,7 @@
                                         <exclude reference="HRf-DO-ooD"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="27" y="503" width="80.5" height="21"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="HRf-DO-ooD"/>
                                     </mask>
@@ -604,8 +615,7 @@
                                         <exclude reference="fv3-Jr-xtX"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="27" y="563" width="80.5" height="21"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="fv3-Jr-xtX"/>
                                     </mask>
@@ -617,19 +627,6 @@
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="154" y="503" width="66.5" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pace" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hme-a1-Hb7">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="242" y="503" width="125" height="21"/>
-                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="miles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lng-Re-UKQ">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -637,9 +634,6 @@
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="154" y="563" width="66.5" height="21"/>
-                                </variation>
                             </label>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHe-KF-OZi">
                                 <rect key="frame" x="150" y="612" width="74" height="35"/>
@@ -678,9 +672,6 @@
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="242" y="563" width="125" height="21"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMC-Dr-pqR">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -698,8 +689,7 @@
                                         <exclude reference="gf1-Ne-Ss1"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="301" y="421" width="58" height="58"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="2HU-ov-5lJ"/>
                                         <include reference="gf1-Ne-Ss1"/>
@@ -727,6 +717,13 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pace" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hme-a1-Hb7">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAF-dR-4bj">
                                 <rect key="frame" x="272" y="108" width="38" height="21"/>
                                 <animations/>
@@ -741,8 +738,7 @@
                                         <exclude reference="zJQ-8s-FH4"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="40" y="534" width="55" height="21"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="zJQ-8s-FH4"/>
                                     </mask>
@@ -860,25 +856,39 @@
                                 <exclude reference="n7V-i2-Rhl"/>
                                 <exclude reference="Kdc-Wc-8ER"/>
                                 <exclude reference="W5j-xt-65i"/>
-                                <exclude reference="Hme-a1-Hb7"/>
                                 <exclude reference="lng-Re-UKQ"/>
                                 <exclude reference="hLz-ik-3zs"/>
                                 <exclude reference="ZMC-Dr-pqR"/>
+                                <exclude reference="Hme-a1-Hb7"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="a0B-Ua-Yb6"/>
-                                <exclude reference="gze-UY-ECi"/>
-                                <exclude reference="pwX-ux-24V"/>
-                                <exclude reference="8IW-oE-bOV"/>
-                                <exclude reference="eqK-Af-aFu"/>
-                                <exclude reference="tWy-ZW-w3b"/>
-                                <exclude reference="zrd-DW-B7h"/>
                                 <exclude reference="I3u-cs-KdF"/>
+                                <exclude reference="07o-G0-vEV"/>
+                                <exclude reference="ONV-yg-14H"/>
+                                <exclude reference="qxr-BD-CEe"/>
+                                <exclude reference="A6Q-ac-xEM"/>
+                                <exclude reference="DO4-3T-tWk"/>
+                                <exclude reference="EeN-fE-xG7"/>
+                                <exclude reference="G7I-UQ-9dJ"/>
+                                <exclude reference="PbW-IM-2oj"/>
                                 <exclude reference="Cmn-xf-1nr"/>
                                 <exclude reference="Tq8-Eh-drU"/>
                                 <exclude reference="VoK-ck-iug"/>
                                 <exclude reference="bQX-41-P3H"/>
                                 <exclude reference="wiV-ZA-xEn"/>
+                                <exclude reference="4Ah-bs-6jZ"/>
+                                <exclude reference="Beg-bK-TCV"/>
+                                <exclude reference="Rka-qj-it6"/>
+                                <exclude reference="qwa-ap-45V"/>
+                                <exclude reference="CDW-nl-DG6"/>
+                                <exclude reference="MeB-c5-nPe"/>
+                                <exclude reference="8IW-oE-bOV"/>
+                                <exclude reference="eqK-Af-aFu"/>
+                                <exclude reference="tWy-ZW-w3b"/>
+                                <exclude reference="zrd-DW-B7h"/>
+                                <exclude reference="a0B-Ua-Yb6"/>
+                                <exclude reference="gze-UY-ECi"/>
+                                <exclude reference="pwX-ux-24V"/>
                                 <exclude reference="J7g-Wc-Pd1"/>
                                 <exclude reference="kgO-If-hSR"/>
                                 <exclude reference="0GA-18-0KE"/>
@@ -888,16 +898,6 @@
                                 <exclude reference="GoN-vT-O4l"/>
                                 <exclude reference="Ydd-WM-cTh"/>
                                 <exclude reference="pMQ-VL-d3S"/>
-                                <exclude reference="07o-G0-vEV"/>
-                                <exclude reference="ONV-yg-14H"/>
-                                <exclude reference="qxr-BD-CEe"/>
-                                <exclude reference="A6Q-ac-xEM"/>
-                                <exclude reference="DO4-3T-tWk"/>
-                                <exclude reference="EeN-fE-xG7"/>
-                                <exclude reference="G7I-UQ-9dJ"/>
-                                <exclude reference="PbW-IM-2oj"/>
-                                <exclude reference="CDW-nl-DG6"/>
-                                <exclude reference="MeB-c5-nPe"/>
                                 <exclude reference="1Ls-yw-WvE"/>
                                 <exclude reference="Qut-7R-57y"/>
                                 <exclude reference="YZz-OD-oOe"/>
@@ -908,10 +908,6 @@
                                 <exclude reference="hBU-h2-jrZ"/>
                                 <exclude reference="jmk-XC-kKy"/>
                                 <exclude reference="ucr-MS-fyJ"/>
-                                <exclude reference="4Ah-bs-6jZ"/>
-                                <exclude reference="Beg-bK-TCV"/>
-                                <exclude reference="Rka-qj-it6"/>
-                                <exclude reference="qwa-ap-45V"/>
                                 <exclude reference="CJS-cw-zCZ"/>
                                 <exclude reference="QCq-kE-13J"/>
                             </mask>
@@ -922,25 +918,39 @@
                                 <include reference="n7V-i2-Rhl"/>
                                 <include reference="Kdc-Wc-8ER"/>
                                 <include reference="W5j-xt-65i"/>
-                                <include reference="Hme-a1-Hb7"/>
                                 <include reference="lng-Re-UKQ"/>
                                 <include reference="hLz-ik-3zs"/>
                                 <include reference="ZMC-Dr-pqR"/>
+                                <include reference="Hme-a1-Hb7"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="a0B-Ua-Yb6"/>
-                                <include reference="gze-UY-ECi"/>
-                                <include reference="pwX-ux-24V"/>
-                                <include reference="8IW-oE-bOV"/>
-                                <include reference="eqK-Af-aFu"/>
-                                <include reference="tWy-ZW-w3b"/>
-                                <include reference="zrd-DW-B7h"/>
                                 <include reference="I3u-cs-KdF"/>
+                                <include reference="07o-G0-vEV"/>
+                                <include reference="ONV-yg-14H"/>
+                                <include reference="qxr-BD-CEe"/>
+                                <include reference="A6Q-ac-xEM"/>
+                                <include reference="DO4-3T-tWk"/>
+                                <include reference="EeN-fE-xG7"/>
+                                <include reference="G7I-UQ-9dJ"/>
+                                <include reference="PbW-IM-2oj"/>
                                 <include reference="Cmn-xf-1nr"/>
                                 <include reference="Tq8-Eh-drU"/>
                                 <include reference="VoK-ck-iug"/>
                                 <include reference="bQX-41-P3H"/>
                                 <include reference="wiV-ZA-xEn"/>
+                                <include reference="4Ah-bs-6jZ"/>
+                                <include reference="Beg-bK-TCV"/>
+                                <include reference="Rka-qj-it6"/>
+                                <include reference="qwa-ap-45V"/>
+                                <include reference="CDW-nl-DG6"/>
+                                <include reference="MeB-c5-nPe"/>
+                                <include reference="8IW-oE-bOV"/>
+                                <include reference="eqK-Af-aFu"/>
+                                <include reference="tWy-ZW-w3b"/>
+                                <include reference="zrd-DW-B7h"/>
+                                <include reference="a0B-Ua-Yb6"/>
+                                <include reference="gze-UY-ECi"/>
+                                <include reference="pwX-ux-24V"/>
                                 <include reference="J7g-Wc-Pd1"/>
                                 <include reference="kgO-If-hSR"/>
                                 <include reference="0GA-18-0KE"/>
@@ -950,16 +960,6 @@
                                 <include reference="GoN-vT-O4l"/>
                                 <include reference="Ydd-WM-cTh"/>
                                 <include reference="pMQ-VL-d3S"/>
-                                <include reference="07o-G0-vEV"/>
-                                <include reference="ONV-yg-14H"/>
-                                <include reference="qxr-BD-CEe"/>
-                                <include reference="A6Q-ac-xEM"/>
-                                <include reference="DO4-3T-tWk"/>
-                                <include reference="EeN-fE-xG7"/>
-                                <include reference="G7I-UQ-9dJ"/>
-                                <include reference="PbW-IM-2oj"/>
-                                <include reference="CDW-nl-DG6"/>
-                                <include reference="MeB-c5-nPe"/>
                                 <include reference="1Ls-yw-WvE"/>
                                 <include reference="Qut-7R-57y"/>
                                 <include reference="YZz-OD-oOe"/>
@@ -972,10 +972,6 @@
                                 <include reference="hBU-h2-jrZ"/>
                                 <include reference="jmk-XC-kKy"/>
                                 <include reference="ucr-MS-fyJ"/>
-                                <include reference="4Ah-bs-6jZ"/>
-                                <include reference="Beg-bK-TCV"/>
-                                <include reference="Rka-qj-it6"/>
-                                <include reference="qwa-ap-45V"/>
                                 <include reference="CJS-cw-zCZ"/>
                                 <exclude reference="fh7-A3-koP"/>
                                 <exclude reference="t5i-bP-Psp"/>
@@ -1007,7 +1003,7 @@
         <image name="DistanceUnselected" width="104" height="90"/>
         <image name="NotificationsSelected" width="267" height="264"/>
         <image name="NotificationsUnselected" width="267" height="264"/>
-        <image name="ObstaclesSelected" width="207" height="270"/>
+        <image name="ObstaclesSelected" width="207" height="327"/>
         <image name="ObstaclesUnselected" width="207" height="327"/>
         <image name="Rectangle 8 Copy" width="329" height="155"/>
         <image name="ReportObstacles" width="204" height="204"/>
