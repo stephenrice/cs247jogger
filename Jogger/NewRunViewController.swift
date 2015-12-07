@@ -30,6 +30,7 @@ class NewRunViewController: UIViewController {
     var usedStoplights = [Stoplight]()
     var audioPlayer: AVAudioPlayer?
     
+    @IBOutlet weak var obstacleBackground: UIImageView!
     var soundNotifications = false
     var visualNotifications = false
     var hapticNotifications = false
@@ -47,7 +48,17 @@ class NewRunViewController: UIViewController {
     
     lazy var locations = [CLLocation]()
     lazy var timer = NSTimer()
+    
+    var obstacleNotificationTime = 0
 
+    @IBAction func obstacleButton(sender: AnyObject) {
+        if obstacleBackground.alpha == 0 {
+            UIView.animateWithDuration(0.5, animations: {
+                self.obstacleBackground.alpha = CGFloat(0.5)
+            })
+            obstacleNotificationTime = seconds
+        }
+    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -92,6 +103,12 @@ class NewRunViewController: UIViewController {
         
         if milesDistance > 0.0 {
             paceLabel.text = String(format: "%.2f", Double(seconds)/(60*milesDistance))
+        }
+        
+        if obstacleBackground.alpha > 0 && (seconds - obstacleNotificationTime) > 2 {
+            UIView.animateWithDuration(0.5, animations: {
+                self.obstacleBackground.alpha = CGFloat(0)
+            })
         }
         
     }
@@ -190,14 +207,16 @@ extension NewRunViewController: CLLocationManagerDelegate {
                         //notification.userInfo = ["UUID": item.UUID, ]
                         notification.category = "TODO_CATEGORY"
                         UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+                        
+                        let notification2 = UILocalNotification()
+                        notification2.alertBody = "Swipe to report sidewalk obstacle" // text that will be displayed in the notification
+                        notification2.userInfo = ["UUID": "JOGGER_REPORT_NOTIF", ]
+                        notification2.category = "TODO_CATEGORY"
+                        UIApplication.sharedApplication().presentLocalNotificationNow(notification2)
                     }
                     
                     if soundNotifications {
-                        //let sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(stoplight.audioName, ofType: "caf")!)
                         do {
-//                            self.audioPlayer = try AVAudioPlayer(contentsOfURL: sound, fileTypeHint: nil)
-//                            audioPlayer!.prepareToPlay()
-//                            audioPlayer!.play()
                             let audioSpeech = AVSpeechUtterance(string: stoplight.directionStr)
                             audioSpeech.rate = 0.4
                             synth.speakUtterance(audioSpeech)

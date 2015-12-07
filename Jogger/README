@@ -1,0 +1,22 @@
+The following sources were consulted while creating this prototype:
+
+http://stackoverflow.com/questions/24111770/make-a-simple-fade-in-animation-in-swift
+http://stackoverflow.com/questions/30808192/allowsbackgroundlocationupdates-in-cllocationmanager-in-ios9
+http://www.raywenderlich.com/69369/audio-tutorial-ios-playing-audio-programatically-2014-edition
+http://www.raywenderlich.com/92428/background-modes-ios-swift-tutorial
+http://stackoverflow.com/questions/25659885/set-a-custom-sound-for-localnotification-from-nsdata
+http://stackoverflow.com/questions/9555564/is-it-possible-to-pop-up-local-notifications-while-the-iphone-app-is-on-screen?lq=1
+http://stackoverflow.com/questions/31571057/ios-remote-notification-with-system-sound
+http://stackoverflow.com/questions/22446332/local-notification-sound-not-playing
+http://stackoverflow.com/questions/19042894/periodic-ios-background-location-updates
+http://stackoverflow.com/questions/24181992/round-up-a-cgfloat-in-swift
+http://stackoverflow.com/questions/29931302/initialize-a-cllocation-object-in-swift-with-latitude-and-longitude
+http://www.raywenderlich.com/97945/make-app-like-runkeeper-swift-part-2
+http://stackoverflow.com/questions/26203970/xcode-6-cant-connect-any-iboutlet-to-viewcontroller
+http://stackoverflow.com/questions/31571057/ios-remote-notification-with-system-sound
+http://stackoverflow.com/questions/25653989/avplayer-not-playing-audio-with-in-ios
+http://stackoverflow.com/questions/22184023/how-to-vibrate-using-local-notification-when-in-background-more-than-once-on-ios
+http://stackoverflow.com/questions/18946881/background-location-services-not-working-in-ios-7
+http://stackoverflow.com/questions/17292783/where-to-find-gpx-file-for-ios-simulator
+http://stackoverflow.com/questions/4954608/change-text-of-button-and-disable-button-in-ios
+

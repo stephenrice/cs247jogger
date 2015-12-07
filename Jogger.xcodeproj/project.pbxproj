@@ -23,6 +23,7 @@
 		DC68D90A1BFC394E00E73992 /* Stoplights.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D9091BFC394E00E73992 /* Stoplights.swift */; };
 		DCC1251B1C02F9B400C9B8F8 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC1251A1C02F9B400C9B8F8 /* Route.swift */; };
 		DCECF8A61C0011E400B8D74C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCECF8A51C0011E400B8D74C /* Images.xcassets */; };
+		DCFAC97E1C158EBC002538E7 /* README in Resources */ = {isa = PBXBuildFile; fileRef = DCFAC97D1C158EBC002538E7 /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		DC68D9091BFC394E00E73992 /* Stoplights.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stoplights.swift; sourceTree = "<group>"; };
 		DCC1251A1C02F9B400C9B8F8 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		DCECF8A51C0011E400B8D74C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DCFAC97D1C158EBC002538E7 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			children = (
 				DC16B2B91C01489900F55936 /* DirectionSounds */,
 				DC24B6B01BFAAD90007E9664 /* AppDelegate.swift */,
+				DCFAC97D1C158EBC002538E7 /* README */,
 				DC24B6B51BFAAD90007E9664 /* ViewController.swift */,
 				DC24B6DA1BFAAFA1007E9664 /* NewRunViewController.swift */,
 				DC68D9091BFC394E00E73992 /* Stoplights.swift */,
@@ -199,7 +202,7 @@
 				TargetAttributes = {
 					DC24B6AA1BFAAD90007E9664 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = GVKT26DYR7;
+						DevelopmentTeam = 8DRZ8YW7XP;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -243,6 +246,7 @@
 				095529CB1C0C346B000B5F6A /* Lato-Regular.ttf in Resources */,
 				DCECF8A61C0011E400B8D74C /* Images.xcassets in Resources */,
 				DC24B6B91BFAAD90007E9664 /* Main.storyboard in Resources */,
+				DCFAC97E1C158EBC002538E7 /* README in Resources */,
 				095529CE1C0D106F000B5F6A /* Lato-Regular.ttf in Resources */,
 				DC24B6BE1BFAAD90007E9664 /* LaunchScreen.xib in Resources */,
 				DC24B6BB1BFAAD90007E9664 /* Images.xcassets in Resources */,

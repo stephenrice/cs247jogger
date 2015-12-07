@@ -24,16 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
-        // Grab the path, make sure to add it to your project!
-        /*var sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("test_turnright", ofType: "caf")!)
-        do {
-            self.audioPlayer = try AVAudioPlayer(contentsOfURL: sound, fileTypeHint: nil)
-            audioPlayer!.prepareToPlay()
-            audioPlayer!.play()
-            print("playing audio")
-        } catch {
-            //nil
-        }*/
         
 
     }
